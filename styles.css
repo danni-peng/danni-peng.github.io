@@ -1,0 +1,304 @@
+:root {
+  color-scheme: light;
+  --ink: #17211b;
+  --muted: #66736b;
+  --line: #d7ddd7;
+  --paper: #fbfcfa;
+  --soft: #edf3ee;
+  --accent: #0f6b56;
+  --accent-strong: #0a4f40;
+  --gold: #9a6a16;
+  --max: 1060px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+main,
+.footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  padding: 1.75rem 0 2rem;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.status,
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--gold);
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.35rem;
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+}
+
+.role {
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+
+.email-line {
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.summary {
+  max-width: 44rem;
+  font-size: 1rem;
+}
+
+.actions,
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.button {
+  min-height: 2.5rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  color: var(--accent-strong);
+  font: 700 0.9rem Arial, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.button.primary:hover {
+  background: var(--accent-strong);
+  color: white;
+}
+
+.section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 3rem;
+}
+
+.prose {
+  max-width: 46rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#papers {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#papers .section-heading {
+  margin-bottom: 0.45rem;
+}
+
+#papers h2 {
+  font-size: 1.65rem;
+}
+
+.paper-group {
+  margin: 1.15rem 0 0.1rem;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.paper-list {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.paper {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+}
+
+.paper.is-hidden {
+  display: none;
+}
+
+.paper h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.authors,
+.venue {
+  margin-bottom: 0.15rem;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.venue {
+  font-style: italic;
+}
+
+.links a {
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.compact-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+time {
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.contact-band {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contact-band h2 {
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.contact-band > div:first-child p:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .intro,
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .intro {
+    min-height: auto;
+    padding-top: 2rem;
+  }
+
+  .portrait {
+    max-width: 12rem;
+  }
+
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+  }
+}
